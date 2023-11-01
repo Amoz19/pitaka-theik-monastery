@@ -3,7 +3,7 @@ import Home from "./Pages/Home";
 import Layout from "./Pages/Layout";
 import HeadMonk from "./Pages/HeadMonk";
 import NotFound from "./Pages/NotFound";
-import PresidingMonk from "./PresidingMonk";
+import PresidingMonk from "./Pages/PresidingMonk";
 import DoctrinalInstructor from "./Pages/DoctrinalInstructor";
 import Trustee from "./Pages/Trustee";
 
