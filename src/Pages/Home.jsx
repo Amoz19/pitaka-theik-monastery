@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <p>THis is home page</p>
+      <p>Welcome</p>
       <Link to="/headmonk">Go to Headmonk page</Link>
       <Link to="/doctrinalInstructor">Go to DoctrinalInstructor page</Link>
       <Link to="/presidingMonk">Go to PresidingMonk page</Link>
