@@ -1,26 +1,43 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/home.scss";
 
-// import "../app.scss";
-
-// import hero1 from "../assets/hero1.jpg";
-// import hero2 from "../assets/hero2.jpg";
-// import hero3 from "../assets/hero3.jpg";
-// import hero4 from "../assets/hero4.jpg";
-// import hero5 from "../assets/hero5.jpg";
-// import hero6 from "../assets/hero6.jpg";
-// import hero7 from "../assets/hero7.jpg";
 import hero8 from "../assets/hero8.png";
+import ProgramLink from "../components/ProgramLink";
+
+const programs = [
+  ["Pre-University", "/doctrinalInstructor"],
+  ["Jamoi Foundation", "/doctrinalInstructor"],
+  ["Skill Building", "/doctrinalInstructor"],
+  ["မွန်စာပေ", "/doctrinalInstructor"],
+  ["စမ္မစကူးလ်", "/doctrinalInstructor"],
+];
 
 const Home = () => {
   return (
-    <div className="p-0 md:px-20">
+    //Hero
+    <div className="p-0 md:px-20 mt-3">
       <div className="mw-full">
-        <img src={hero8} />
+        <img src={hero8} className="h-[60vh] w-full object-fit" />
       </div>
-      <div className="text-blue text-l md:text-2xl lg:text-3xl font-black md:text-center">
+
+      <div className="text-primary text-l md:text-2xl lg:text-3xl stroke-primary stroke-3 md:text-center my-5 title">
         <h2>RAMONNYA NIKAYA MON PITAKA THEIK MONASTERY</h2>
         <h2>ဘာတိုက်ပိဋကတ်မန်</h2>
+      </div>
+
+      <div className="sub-title my-16">
+        <h2 className="text-xl text-primary mb-3">Programs</h2>
+        <div className="grid grid-cols-3 gap-10">
+          {programs.map(([programs, link], i) => (
+            <ProgramLink key={i} link={link}>
+              <p>{programs}</p>
+            </ProgramLink>
+          ))}
+        </div>
+      </div>
+      <div className="sub-title">
+        <h2 className="text-primary text-xl">Management Committee</h2>
       </div>
 
       <p className="text-red-500">This is home page.</p>
