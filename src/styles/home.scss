@@ -1,4 +1,5 @@
 $primary: #132043;
+$secondary: #ffffff;
 
 .title,
 .sub-title {
@@ -8,4 +9,11 @@ $primary: #132043;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: $primary;
   }
+}
+
+.management-title,
+.foot-title {
+  -webkit-text-fill-color: $secondary; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $secondary;
 }
