@@ -1,15 +1,13 @@
 import React from "react";
-import { MaterialSymbolsMenuRounded } from "../utils/icon-utils";
+import { IcBaselineKeyboardArrowDown } from "../utils/icon-utils";
 
 const Navbar = () => {
   return (
-    <nav className="h-14 bg-[#FAFAFA] flex items-center justify-between text-xl font-semibold px-20 border">
-      <h1 className="text-l text-zinc-900 capitalize">
-        RAMONNYA NIKAYA MON PITAKA THEIK MONASTERY
-      </h1>
-      <button className="bg-primary text-white px-4 py-2 rounded-2xl text-sm flex items-center">
-        Menu <MaterialSymbolsMenuRounded className="text-2xl ml-1" />
-      </button>
+    <nav className="h-14 bg-[#FAFAFA] flex items-center justify-center  font-semibold px-4 md:px-20  border">
+      <h1 className="text-3xl text-zinc-900 capitalize head">BhalTike</h1>
+      {/* <button className="bg-primary text-white p-2 md:px-4 md:py-2 rounded-2xl text-xs md:text-sm flex items-center">
+        Menu <IcBaselineKeyboardArrowDown className="text-2xl ml-1" />
+      </button> */}
       {/* <MaterialSymbolsMenuRounded className="bg-primary text-white text-4xl">
         Menu
       </MaterialSymbolsMenuRounded> */}
