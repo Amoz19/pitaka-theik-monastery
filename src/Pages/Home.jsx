@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef, useRef } from "react";
 import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import "../styles/home.scss";
@@ -24,7 +24,7 @@ const Home = () => {
   return (
     //Hero
     <div className="px-3 md:px-20 mt-3">
-      <div className="mw-full">
+      <div className="mw-full" id="home">
         <img src={hero8} className="w-full" />
       </div>
 
@@ -33,7 +33,7 @@ const Home = () => {
         <h2>ဘာတိုက်ပိဋကတ်မန်</h2>
       </div>
 
-      <div className="sub-title my-8 md:my-16">
+      <div className="sub-title my-8 md:my-16" id="programs">
         <h2 className="text-xl text-primary mb-3">Programs</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {programs.map(([programs, link], i) => (
@@ -44,7 +44,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="sub-title mb-8 md:mb-16">
+      <div className="sub-title mb-8 md:mb-16" id="committee">
         <h2 className="text-primary text-xl">Management Committee</h2>
         <div className="flex justify-center my-5">
           <ProgramLink style="bg-primary rounded-md text-white p-4">
