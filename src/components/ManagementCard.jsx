@@ -29,7 +29,7 @@ const ManagementCard = () => {
     ));
   };
   return (
-    <div className="grid grid-cols-3">
+    <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
       {categories.map(([link, title, ...names], i) => (
         <div key={i} className="bg-secondary w-fit p-8 rounded-3xl">
           <h3 className="text-center text-xl underline underline-offset-3">
