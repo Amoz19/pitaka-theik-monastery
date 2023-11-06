@@ -1,6 +1,4 @@
-import React, { forwardRef, useRef } from "react";
-import { Link } from "react-router-dom";
-import { twMerge } from "tailwind-merge";
+import { useNavigate } from "react-router-dom";
 import "../styles/home.scss";
 import hero8 from "../assets/hero8.png";
 import ProgramLink from "../components/ProgramLink";
@@ -21,6 +19,7 @@ const programs = [
 // ];
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     //Hero
     <div className="px-3 md:px-20 mt-3">
@@ -47,7 +46,10 @@ const Home = () => {
       <div className="sub-title mb-8 md:mb-16" id="committee">
         <h2 className="text-primary text-xl">Management Committee</h2>
         <div className="flex justify-center my-5">
-          <ProgramLink style="bg-primary rounded-md text-white p-4">
+          <ProgramLink
+            style="bg-primary rounded-md text-white p-4"
+            link="headMonk"
+          >
             <p className="management-title text-xl">ကျောင်းထိုင်ဆရာတော်</p>
           </ProgramLink>
         </div>
