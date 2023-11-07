@@ -12,16 +12,9 @@ const programs = [
   ["စမ္မစကူးလ်", "/doctrinalInstructor"],
 ];
 
-// const categories = [
-//   ["တိုက်အုပ်ဆရာတော်", "ကျေးရွာပရဟိတ", "စည်းကမ်းထိန်းသိမ်းရေး"],
-//   ["ကျောင်းဂေါပကအဖွဲ့", "ဆောက်လုပ်ရေးဌာန", "ဆ္မမ်းကွမ်းဌာန", "ဘဏ္ဍာရေးဌာန"],
-//   ["တိုက်အုပ်ဆရာတော်", "ပညာရေးဌာန", "ပြန်ကြားရေးဌာန"],
-// ];
-
 const Home = () => {
   const navigate = useNavigate();
   return (
-    //Hero
     <div className="px-3 md:px-20 mt-3">
       <div className="mw-full" id="home">
         <img src={hero8} className="w-full" />
@@ -55,12 +48,6 @@ const Home = () => {
         </div>
         <ManagementCard />
       </div>
-
-      {/* <p className="text-red-500">This is home page.</p>
-      <Link to="/headmonk">Go to Headmonk page</Link>
-      <Link to="/doctrinalInstructor">Go to DoctrinalInstructor page</Link>
-      <Link to="/presidingMonk">Go to PresidingMonk page</Link>
-      <Link to="/trustee">Go to trustee page</Link> */}
     </div>
   );
 };
