@@ -28,9 +28,13 @@ const ReusableLayout = ({ children, dummydata, style }) => {
   };
 
   return (
-    <div className={`px-16 mb-10`}>
+    <div className={`px-8 md:px-16 mb-10`}>
       {children}
-      <div className={`${style && "grid grid-cols-3 gap-x-14"}`}>
+      <div
+        className={`${
+          style && "grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14"
+        }`}
+      >
         {dummydata.map((d, i) => (
           <div key={i} className={`mb-5 bg-secondary rounded-md p-5`}>
             {renderSubtitle(d.data)}
@@ -46,12 +50,14 @@ const ReusableLayout = ({ children, dummydata, style }) => {
                 <p>လက်ရှိကျောင်းသား - {d.currentStudents}</p>
               )}
             </div>
-            <ProgramLink
-              style="text-sm p-1 md:px-5 md:py-2 rounded-3xl text-white bg-primary"
-              link={d.websiteLink}
-            >
-              Website
-            </ProgramLink>
+            {style && (
+              <ProgramLink
+                style="text-sm px-5 py-2 rounded-3xl text-white bg-primary"
+                link={d.websiteLink}
+              >
+                Website
+              </ProgramLink>
+            )}
           </div>
         ))}
       </div>
