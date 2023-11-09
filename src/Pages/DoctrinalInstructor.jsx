@@ -21,7 +21,7 @@ const dummyDataOne = [
     currentStudents: 40,
     graduatedStudents: 500,
     totalTeachers: 8,
-    websiteLink: "/",
+    websiteLink: "https://blog-post-omega.vercel.app/",
   },
   {
     data: [["Skill Building Program", "About"]],
@@ -43,12 +43,6 @@ const dummyDataTwo = [
 ];
 
 const DoctrinalInstructor = () => {
-  // const [selectedItem, setSelectedItem] = useState(null);
-
-  // const handleClick = (title) => {
-  //   setSelectedItem(title === selectedItem ? null : title);
-  // };
-
   return (
     <>
       <ReusableLayout dummydata={dummyDataOne} style={true}>
@@ -58,24 +52,6 @@ const DoctrinalInstructor = () => {
         <h2 className="text-3xl font-semibold mb-4">ပြန်ကြားရေးဌာန</h2>
       </ReusableLayout>
     </>
-    // <div className="flex">
-    //   {dummyData.map((data) => (
-    //     <Dropdown
-    //       handleClick={() => handleClick(data.title)}
-    //       selectedItem={selectedItem}
-    //     >
-    //       <div>
-    //         <p>{data.title}</p>
-    //         {selectedItem === data.title ? <p>{data.body}</p> : null}
-    //         <p>{data.totalStudents}</p>
-    //         <p>{data.graduatedStudents}</p>
-    //         <p>{data.currentStudents}</p>
-    //       </div>
-    //     </Dropdown>
-    //   ))}
-    // </div>
-
-    // Render totalStudents inside ReusableLayout
   );
 };
 

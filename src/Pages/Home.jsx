@@ -1,10 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import "../styles/home.scss";
 import hero8 from "../assets/hero8.png";
 import ProgramLink from "../components/ProgramLink";
 import ManagementCard from "../components/ManagementCard";
 
-const programs = [
+export const programs = [
   ["Pre-University", "/doctrinalInstructor"],
   ["Jamoi Foundation", "/doctrinalInstructor"],
   ["Skill Building", "/doctrinalInstructor"],
@@ -13,7 +12,6 @@ const programs = [
 ];
 
 const Home = () => {
-  const navigate = useNavigate();
   return (
     <div className="px-3 md:px-20 mt-3">
       <div className="mw-full" id="home">

@@ -1,22 +1,31 @@
-// import {
-//   IonIosArrowDropdown,
-//   MaterialSymbolsExpandCircleUpOutline,
-// } from "../utils/icon-utils";
+import { useState } from "react";
+import {
+  IonIosArrowDropdown,
+  MaterialSymbolsExpandCircleUpOutline,
+} from "../utils/icon-utils";
 
-const Dropdown = ({ children }) => {
-  // const renderIcon = () => {
-  //   const IconComponent =
-  //     selectedItem !== null
-  //       ? IonIosArrowDropdown
-  //       : MaterialSymbolsExpandCircleUpOutline;
-  //   return <IconComponent className="text-2xl ml-3" onClick={handleClick} />;
-  // };
+const Dropdown = ({ title, body }) => {
+  const [selectedItem, setSelectedItem] = useState(false);
+
+  const handleClick = () => {
+    setSelectedItem(!selectedItem);
+  };
+
+  const renderIcon = () => {
+    const IconComponent = selectedItem
+      ? MaterialSymbolsExpandCircleUpOutline
+      : IonIosArrowDropdown;
+    return <IconComponent className="text-2xl ml-3" onClick={handleClick} />;
+  };
 
   return (
-    <div className="flex border-b-2 border-zinc-700 p-4">
-      {children}
-      {/* {renderIcon()} */}
-    </div>
+    <>
+      <div className="flex items-center title-div ">
+        <p>{title}</p>
+        {renderIcon()}
+      </div>
+      {selectedItem && <p>{body}</p>}
+    </>
   );
 };
 

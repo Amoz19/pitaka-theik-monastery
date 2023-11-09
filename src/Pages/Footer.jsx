@@ -21,7 +21,7 @@ const footer = [
     subtitle: [
       ["bhaltike2022@gmail.com", "/", BxBxlGmail],
       [
-        "ဘာတိုက် ပိငုကတ် မန်",
+        "ဘာတိုက် ပိဋကတ် မန်",
         "https://www.facebook.com/bartheikpitakotmon",
         PhFacebookLogo,
       ],
@@ -78,7 +78,7 @@ const Footer = () => {
       </div>
       <div className="text-center">
         <p className="text-sm py-3">
-          copyright©2023 Ramonnya Nikaya Mon Pitaka Pheik Monastery
+          Copyright©2023 Ramonnya Nikaya Mon Pitaka Pheik Monastery
         </p>
       </div>
     </div>

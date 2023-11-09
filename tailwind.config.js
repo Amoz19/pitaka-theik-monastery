@@ -5,8 +5,9 @@ export default {
     extend: {
       colors: {
         primary: "#132043",
-        secondary: "#C2D9FF",
+        secondary: "#CDF5FD",
         footer: "#001524",
+        navbar: "#164863",
       },
     },
   },

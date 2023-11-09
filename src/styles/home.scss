@@ -6,8 +6,9 @@ $secondary: #ffffff;
   h2 {
     //   color: black;
     -webkit-text-fill-color: $primary; /* Will override color (regardless of order) */
-    -webkit-text-stroke-width: 2px;
+    // -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $primary;
+    font-weight: 900;
   }
 }
 
