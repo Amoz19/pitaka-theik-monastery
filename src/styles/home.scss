@@ -4,15 +4,14 @@ $secondary: #ffffff;
 .title,
 .sub-title {
   h2 {
-    //   color: black;
+    color: $primary;
     -webkit-text-fill-color: $primary; /* Will override color (regardless of order) */
-    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-width: px;
     -webkit-text-stroke-color: $primary;
     font-weight: 900;
   }
 }
 
-.management-title,
 .foot-title {
   -webkit-text-fill-color: $secondary; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 1px;

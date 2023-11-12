@@ -18,13 +18,15 @@ const Home = () => {
         <img src={hero8} className="w-full" />
       </div>
 
-      <div className="text-primary text-l md:text-2xl lg:text-3xl stroke-primary stroke-3 md:text-center my-5 title">
-        <h2>RAMONNYA NIKAYA MON PITAKA THEIK MONASTERY</h2>
-        <h2>ဘာတိုက်ပိဋကတ်မန်</h2>
+      <div className="text-primary text-center text-2xl lg:text-3xl md:text-center my-5 title">
+        <h2>Welcome from Bhaltike Webpage</h2>
+        <h2>ဒုင်တၠုင်ရအဴ</h2>
       </div>
 
       <div className="sub-title my-8 md:my-16" id="programs">
-        <h2 className="text-xl text-primary mb-3">Programs</h2>
+        <h2 className="text-2xl font-black text-secondary mb-3 decoration">
+          Programs
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {programs.map(([programs, link], i) => (
             <ProgramLink key={i} link={link}>
@@ -35,10 +37,10 @@ const Home = () => {
       </div>
 
       <div className="sub-title mb-8 md:mb-16" id="committee">
-        <h2 className="text-primary text-xl">Management Committee</h2>
+        <h2 className="text-primary text-2xl">Management Committee</h2>
         <div className="flex justify-center my-5">
           <ProgramLink
-            style="bg-primary rounded-md text-white p-4"
+            style="rounded-xl p-4 outline-transparent"
             link="headMonk"
           >
             <p className="management-title text-xl">ကျောင်းထိုင်ဆရာတော်</p>

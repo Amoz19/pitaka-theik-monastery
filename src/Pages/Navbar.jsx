@@ -3,12 +3,19 @@ import { programs } from "./Home";
 import { useState } from "react";
 import cn from "../utils/twMergeUtils";
 import { RadixIconsCross2 } from "../utils/icon-utils";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <nav className="h-20 bg-[#FAFAFA] flex items-center justify-around  font-semibold px-4 md:px-20  border">
-      <h1 className="text-3xl text-zinc-900 capitalize head">BhalTike</h1>
+      <h1
+        className="text-3xl text-zinc-900 capitalize head"
+        onClick={() => navigate("/")}
+      >
+        BhalTike
+      </h1>
       <div
         className={cn(
           "hidden lg:flex flex-grow-1 justify-end transition-all delay-1000",

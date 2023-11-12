@@ -20,7 +20,7 @@ const ManagementCard = () => {
   const renderProgramLinks = (names, link) => {
     return names.map((name, i) => (
       <ProgramLink
-        style="bg-primary rounded-md text-white p-4"
+        style="bg-primary rounded-md text-white p-4 outline-transparents"
         key={i}
         link={link}
       >
@@ -32,9 +32,7 @@ const ManagementCard = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center">
       {categories.map(([link, title, ...names], i) => (
         <div key={i} className=" bg-secondary p-8 rounded-3xl">
-          <h3 className="text-center text-xl underline underline-offset-3">
-            {title}
-          </h3>
+          <h3 className="text-center text-xl ">{title}</h3>
           <div className="flex flex-col gap-5 my-5">
             {renderProgramLinks(names, link)}
           </div>

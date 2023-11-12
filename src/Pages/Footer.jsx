@@ -57,7 +57,7 @@ const Footer = () => {
     return subtitles.map(([value, link, Icon], i) => (
       <div key={i} className="my-3">
         <Link to={link} className="flex">
-          <button>{Icon && <Icon className="text-2xl mr-3" />}</button>
+          {/* <button>{Icon && <Icon className="text-2xl mr-3" />}</button> */}
           <p>{value}</p>
         </Link>
       </div>
@@ -65,7 +65,7 @@ const Footer = () => {
   };
   return (
     <div className="bg-footer text-white">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 p-3 md:px-20 md:py-6 ">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 p-5 md:px-20 md:py-6 ">
         <div className="flex justify-center items-center">
           <img src={logo} alt="logo" className="w-32" />
         </div>
@@ -77,9 +77,7 @@ const Footer = () => {
         ))}
       </div>
       <div className="text-center">
-        <p className="text-sm py-3">
-          Copyright©2023 Ramonnya Nikaya Mon Pitaka Pheik Monastery
-        </p>
+        <p className="text-sm pb-5">Copyright©2023 Bhaltike</p>
       </div>
     </div>
   );

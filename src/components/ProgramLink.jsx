@@ -9,7 +9,7 @@ const ProgramLink = ({ children, link, style }) => {
     <>
       <button
         className={twMerge(
-          "p-5 w-fit rounded-2xl  flex items-center bg-secondary",
+          "p-5 w-fit rounded-2xl  flex items-center bg-secondary outline outline-offset-1 outline-cyan-600",
           style
         )}
         onClick={() => navigate(link)}

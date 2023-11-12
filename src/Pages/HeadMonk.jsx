@@ -15,15 +15,15 @@ const paragraphs =
 const socialLink = [
   {
     Icon: PhFacebookLogo,
-    link: "",
+    link: "https://www.facebook.com/profile.php?id=100073589050618",
   },
   {
     Icon: BxBxlGmail,
-    link: "",
+    link: "bhaltike2022@gmail.com",
   },
   {
     Icon: MaterialSymbolsCallOutlineSharp,
-    link: "",
+    link: "09787222285",
   },
 ];
 const HeadMonk = () => {
@@ -39,11 +39,11 @@ const HeadMonk = () => {
           alt="headmonk"
           className="w-32 h-32 rounded-[50%]"
         />
-        <button className="w-fit flex bg-primary text-white text-2xl my-4 px-6 py-2 rounded-3xl ml-4">
+        <button className="w-fit flex bg-primary text-white text-3xl my-4 px-6 py-2 rounded-3xl ml-4">
           {socialLink.map((link, i) => (
-            <Link key={i} className="mr-3 last:mr-0">
+            <a href={link.link} key={i} className="mr-3 last:mr-0 poi">
               {<link.Icon />}
-            </Link>
+            </a>
           ))}
         </button>
         <div className="bg-secondary/50 text-slate-900 p-4 rounded-xl mx-8 mb-4 md:w-2/4 md:mx-auto">
