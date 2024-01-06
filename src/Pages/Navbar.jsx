@@ -1,24 +1,23 @@
-import React from "react";
 import { programs } from "./Home";
 import { useState } from "react";
 import cn from "../utils/twMergeUtils";
 import { RadixIconsCross2 } from "../utils/icon-utils";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   return (
-    <nav className="h-20 bg-[#FAFAFA] flex items-center justify-around  font-semibold px-4 md:px-20  border">
+    <nav className="h-20 bg-[#FAFAFA] flex items-center justify-between  font-semibold px-4 md:px-20  border">
       <h1
-        className="text-3xl text-zinc-900 capitalize head"
+        className="text-3xl text-zinc-900 capitalize head "
         onClick={() => navigate("/")}
       >
         BhalTike
       </h1>
       <div
         className={cn(
-          "hidden lg:flex flex-grow-1 justify-end transition-all delay-1000",
+          "hidden w-full lg:flex flex-grow-1 justify-end transition-all delay-1000  ",
           {
             "flex flex-col justify-start absolute left-0 top-1 bg-white/80 backdrop-blur-lg h-screen ":
               isOpen,
@@ -32,16 +31,16 @@ const Navbar = () => {
           <RadixIconsCross2 className="text-2xl mt-3 mr-3" />
         </button>
 
-        {programs.map(([data], i) => (
-          <button
+        {programs.map(([data, link], i) => (
+          <div
             key={i}
             className={cn(
-              "flex py-2 px-12 hover:text-primary hover:scale-110 transition-all",
-              { "my-3": isOpen }
+              "flex py-2 px-6  hover:text-primary hover:scale-110 transition-all",
+              { "my-3 px-16": isOpen }
             )}
           >
-            {data}
-          </button>
+            <Link to={link}>{data}</Link>
+          </div>
         ))}
       </div>
       <div>

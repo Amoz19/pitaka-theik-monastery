@@ -64,14 +64,14 @@ const Footer = () => {
     ));
   };
   return (
-    <div className="bg-footer text-white">
+    <div className="bg-[#FAFAFA] border">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 p-5 md:px-20 md:py-6 ">
         <div className="flex justify-center items-center">
           <img src={logo} alt="logo" className="w-32" />
         </div>
         {footer.map((data, i) => (
           <div key={i}>
-            <h1 className="foot-title mb-2 text-xl">{data.title}</h1>
+            <h1 className="font-semibold mb-2 text-xl">{data.title}</h1>
             {getSubtitle(data.subtitle)}
           </div>
         ))}

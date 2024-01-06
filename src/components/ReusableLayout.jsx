@@ -4,21 +4,19 @@ import ProgramLink from "../components/ProgramLink";
 
 const ReusableLayout = ({ children, dummydata, style }) => {
   return (
-    <div className={`px-8 md:px-16 mb-10`}>
+    <div className={` mb-10`}>
       {children}
       <div
-        className={`${
-          style && "grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14"
-        }`}
+        className={`${"grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14"}`}
       >
         {dummydata.map((d, i) => (
-          <div key={i} className={`mb-5 bg-secondary rounded-md p-8`}>
+          <div key={i} className={`mb-5 bg-secondary rounded-md p-8 h-fit `}>
             {d.data.map(([title, body, img], j) => (
-              <div key={j}>
+              <div key={j} className="mb-6">
                 {img && (
                   <img
                     src={img}
-                    className="w-full h-32 object-cover rounded-md"
+                    className="w-full h-32 object-cover rounded-md mb-2"
                   />
                 )}
                 <h1
@@ -46,7 +44,7 @@ const ReusableLayout = ({ children, dummydata, style }) => {
             {style && (
               <ProgramLink
                 style="text-sm px-5 py-2 rounded-3xl text-white bg-primary"
-                href={d.websiteLink}
+                link={d.websiteLink}
               >
                 Website
               </ProgramLink>

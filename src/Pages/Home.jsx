@@ -41,15 +41,7 @@ const Home = () => {
       </div>
 
       <div className="sub-title mb-8 md:mb-16" id="committee">
-        <h2 className="text-primary text-2xl">Management Committee</h2>
-        <div className="flex justify-center my-5">
-          <ProgramLink
-            style="rounded-xl p-4 outline-transparent"
-            link="headMonk"
-          >
-            <p className="management-title text-xl">ကျောင်းထိုင်ဆရာတော်</p>
-          </ProgramLink>
-        </div>
+        <h2 className="text-primary text-2xl mb-4">Management Committee</h2>
         <ManagementCard />
       </div>
     </div>

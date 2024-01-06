@@ -11,9 +11,3 @@ $secondary: #ffffff;
     font-weight: 900;
   }
 }
-
-.foot-title {
-  -webkit-text-fill-color: $secondary; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $secondary;
-}
