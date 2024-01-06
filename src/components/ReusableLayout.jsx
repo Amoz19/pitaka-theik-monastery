@@ -1,8 +1,6 @@
-import { useState } from "react";
 import "../styles/presidingMonk.scss";
 
 import ProgramLink from "../components/ProgramLink";
-import Dropdown from "./Dropdown";
 
 const ReusableLayout = ({ children, dummydata, style }) => {
   return (
@@ -14,11 +12,26 @@ const ReusableLayout = ({ children, dummydata, style }) => {
         }`}
       >
         {dummydata.map((d, i) => (
-          <div key={i} className={`mb-5 bg-secondary h-72 rounded-md p-8`}>
-            {d.data.map(([title, body], j) => (
-              <Dropdown key={j} title={title} body={body} />
+          <div key={i} className={`mb-5 bg-secondary rounded-md p-8`}>
+            {d.data.map(([title, body, img], j) => (
+              <div key={j}>
+                {img && (
+                  <img
+                    src={img}
+                    className="w-full h-32 object-cover rounded-md"
+                  />
+                )}
+                <h1
+                  className={`font-bold ${
+                    j != 0 ? "text-title text-xl" : "text-black text-2xl"
+                  }`}
+                >
+                  {title && <span>{title}</span>}
+                </h1>
+                <p className="text-title/80 mt-2">{body}</p>
+              </div>
             ))}
-            <div className="my-4">
+            <div className="my-4 text-l font-bold text-title">
               {d.totalStudents && (
                 <p>ကျောင်းသားစုစုပေါင်း - {d.totalStudents}</p>
               )}

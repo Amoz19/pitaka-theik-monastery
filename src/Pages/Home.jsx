@@ -29,7 +29,11 @@ const Home = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {programs.map(([programs, link], i) => (
-            <ProgramLink key={i} link={link}>
+            <ProgramLink
+              key={i}
+              link={link}
+              style={"outline outline-offset-0 outline-cyan-600/40"}
+            >
               <p>{programs}</p>
             </ProgramLink>
           ))}
