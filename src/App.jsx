@@ -6,6 +6,7 @@ import NotFound from "./Pages/NotFound";
 import PresidingMonk from "./Pages/PresidingMonk";
 import DoctrinalInstructor from "./Pages/DoctrinalInstructor";
 import Trustee from "./Pages/Trustee";
+import Login from "@admin/Login";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             />
             <Route path="/trustee" element={<Trustee />} />
           </Route>
+          <Route path="/admin" element={<Login />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
